@@ -6,7 +6,8 @@ void main() {
       enteros[i] = 0;
     }
   }
-  for (int i in enteros) {
-    print(i);
+
+  for (int i = 0; i < enteros.length; i++) {
+    print(enteros[i] * i);
   }
 }

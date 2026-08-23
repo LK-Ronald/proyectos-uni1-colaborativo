@@ -17,7 +17,10 @@ namespace proyecto_cs
                 }
             }
 
-            foreach (int i in enteros) { Console.WriteLine(i); }
+            for (int i = 0; i < enteros.Length; i++)
+            {
+                Console.WriteLine(enteros[i] * i);
+            }
         }
     }
 
