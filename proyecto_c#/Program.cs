@@ -7,13 +7,17 @@ namespace proyecto_cs
         static void Main()
         {
 
-            int[] enteros = [3, 4, 76, 4, 23, 35, 65, 67, 87, 23];
+            int[] enteros = [3, 4, 76, 4, 23, 35, 65, 66, 87, 23];
 
-            foreach (int i in enteros)
+            for (int i = 0; i < enteros.Length; i++)
             {
-                Console.WriteLine(i);
+                if (enteros[i] % 2 != 0)
+                {
+                    enteros[i] = 0;
+                }
             }
 
+            foreach (int i in enteros) { Console.WriteLine(i); }
         }
     }
 
