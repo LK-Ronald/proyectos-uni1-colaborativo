@@ -15,17 +15,22 @@ namespace proyecto_cs
                 [7,8,9]
             ];
 
-            int suma = 0;
+            String mostrarMatriz = "";
 
-            for (int y = 0; y < matriz[0].Length; y++)
+            int[] temporal = matriz[0];
+            matriz[0] = matriz[2];
+            matriz[2] = temporal;
+
+            for (int x = 0; x < matriz.Length; x++)
             {
-                for (int x = 0; x < matriz.Length; x++)
+                for (int y = 0; y < matriz[x].Length; y++)
                 {
-                    suma += matriz[x][y];
+                    mostrarMatriz = $"{mostrarMatriz} {matriz[x][y]}";
                 }
+                mostrarMatriz = $"{mostrarMatriz} \n";
             }
 
-            Console.WriteLine(suma);
+            Console.WriteLine(mostrarMatriz);
         }
     }
 

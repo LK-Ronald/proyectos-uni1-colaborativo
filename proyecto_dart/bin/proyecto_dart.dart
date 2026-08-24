@@ -5,13 +5,18 @@ void main() {
     [7, 8, 9],
   ];
 
-  int suma = 0;
+  String mostrarMatriz = "";
 
-  for (int y = 0; y < matriz[0].length; y++) {
-    for (int x = 0; x < matriz.length; x++) {
-      suma += matriz[x][y];
+  List<int> temporal = matriz[0];
+  matriz[0] = matriz[2];
+  matriz[2] = temporal;
+
+  for (int x = 0; x < matriz.length; x++) {
+    for (int y = 0; y < matriz[x].length; y++) {
+      mostrarMatriz = '$mostrarMatriz ${matriz[x][y]}';
     }
+    mostrarMatriz = '$mostrarMatriz \n';
   }
 
-  print(suma);
+  print(mostrarMatriz);
 }
