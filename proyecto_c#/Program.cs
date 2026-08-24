@@ -13,6 +13,18 @@ namespace proyecto_cs
                 [7,8,9]
             ];
 
+            String mostrarMatriz = "";
+
+            for (int y = 0; y < matriz[0].Length; y++)
+            {
+                for (int x = 0; x < matriz.Length; x++)
+                {
+                    mostrarMatriz = $"{mostrarMatriz} {matriz[x][y]}";
+                }
+                mostrarMatriz = $"{mostrarMatriz}\n";
+            }
+
+            Console.WriteLine(mostrarMatriz);
         }
     }
 
