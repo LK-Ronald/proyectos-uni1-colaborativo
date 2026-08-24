@@ -1,4 +1,6 @@
 ﻿
+using System.Diagnostics.CodeAnalysis;
+
 namespace proyecto_cs
 {
 
@@ -13,18 +15,17 @@ namespace proyecto_cs
                 [7,8,9]
             ];
 
-            String mostrarMatriz = "";
+            int suma = 0;
 
             for (int y = 0; y < matriz[0].Length; y++)
             {
                 for (int x = 0; x < matriz.Length; x++)
                 {
-                    mostrarMatriz = $"{mostrarMatriz} {matriz[x][y]}";
+                    suma += matriz[x][y];
                 }
-                mostrarMatriz = $"{mostrarMatriz}\n";
             }
 
-            Console.WriteLine(mostrarMatriz);
+            Console.WriteLine(suma);
         }
     }
 
